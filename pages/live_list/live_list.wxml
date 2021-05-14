@@ -1,0 +1,10 @@
+<view class="history">
+  <view class="list_box">
+    <view wx:for="{{live_list}}" wx:key="index" data-obj="{{item}}" class="history_list"  bindtap="startPlay"
+    style="background-image:url({{item.class_image}});background-size:100%">
+      <view class="message">
+        {{item.class_title}} {{item.class_name}}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<view>
+  <view class="beforeLive_bg" style="background-image: url({{bg_image}});" bindtap="goToAfter">
+    <image src="https://cloud.piesat.cn/image-server/live/yugao.png" class="live_image"></image>
+    <view class="title">
+      {{title}}
+    </view>
+    <image src="{{person_image}}" class="teacher_image"></image>
+    <view class="message">
+      {{message}}
+    </view>
+  </view>
+</view>

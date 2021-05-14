@@ -1,0 +1,21 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/liveing/liveing",
+    "pages/live_list/live_list",
+    "pages/history/history",
+    "pages/beforeLive/beforeLive",
+    "pages/afterLive/afterLive",
+    "pages/resetPWD/resetPWD",
+    "pages/register/register",
+    "pages/videoPlay/videoPlay",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "PIE-Engine直播间",
+    "navigationBarTextStyle":"black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

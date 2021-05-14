@@ -1,0 +1,10 @@
+<view>
+  <video 
+  class="video"
+  id='backVideo'
+  autoplay
+  bindplay='backplay'
+  show-center-play-btn='{{false}}' 
+  show-play-btn="{{true}}" 
+  src='{{videoUrl}}' ></video>
+</view>

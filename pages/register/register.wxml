@@ -1,0 +1,43 @@
+<view class="register">
+  <view class="box" wx:if="{{changeBox}}">
+    <view class="title">用户注册</view>
+    <input class="input_style" placeholder="请输入用户名,字母开头：字母+数字(6-20位)" value="{{username}}" bindblur='checkUsername' />
+    <input class="input_style" type="text" password placeholder="请设置6--10位密码:数字+字母" value="{{password}}"
+      bindblur="getPassword" />
+    <input class="input_style" type="text" password placeholder="再次输入密码" value="{{confirm}}" bindblur="getConfirm" />
+    <input class="input_style" type="text" placeholder="请输入手机号或邮箱" value="{{phone_Mail}}" bindblur="getPhone_Mail" />
+    <view class="checkCode_box">
+      <input type="text" placeholder="请输入验证码" class="checkCode_input" value="{{checkCode}}"
+        bindblur="getCheckCode_value" />
+      <button class="user_verificationcode" bindtap="getCheckCode"
+        wx:if="{{getCheckCode_show}}">{{getCheckCode_name}}</button>
+      <button class="user_verificationcode" bindtap="getCheckCode"
+        wx:if="{{!getCheckCode_show}}">{{countdown}}秒</button>
+
+    </view>
+    <view class="agreement_box">
+      <checkbox-group bindchange="checkboxChange">
+        <label>
+          <checkbox value="{{checkbox}}" checked="{{checkbox}}" />我同意
+        </label>
+      </checkbox-group>
+      <label class="agreement" bindtap="goToAgreement">隐私协议</label>
+    </view>
+    <button class="nextBtn" bindtap="next">下一步</button>
+    <view style="text-align:right" bindtap="goToLogin">已有账号,去登陆</view>
+  </view>
+  <view class="box" wx:if="{{!changeBox}}">
+    <input class="input_style" placeholder="请输入机构名称（选填）" value="{{mechanismname}}" bindblur='getMechanismname' />
+    <view class="tui-picker-content">
+      <picker bindchange="changeRegin" mode="region" value="{{region}}">
+        <view class="tui-picker-detail">{{region[0]}} - {{region[1]}} - {{region[2]}}</view>
+      </picker>
+    </view>
+    <input class="input_style" placeholder="请输入联系人（选填）" value="{{contacts}}" bindblur='getContacts' />
+    <input class="input_style" placeholder="请输入联系电话（选填）" value="{{contactNumber}}" bindblur='getContactNumber' />
+    <view class="button_box">
+      <button class="goback" bindtap="goback">返回</button>
+      <button class="create" bindtap="create">创建账号</button>
+    </view>
+  </view>
+</view>

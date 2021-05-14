@@ -1,0 +1,41 @@
+.history {
+  /* position: fixed; */
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.list_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100%);
+}
+
+.history_list {
+  width: 100%;
+  background-color: #ccc;
+  margin-top: 10px;
+  height: 415rpx;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  padding: 5px;
+  background-color: #000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #fff;
+  line-height: 30px;
+}

@@ -1,0 +1,17 @@
+<view>
+  <view wx:if="{{!backShow}}" class="afterLive_bg" style="background-image: url(https://cloud.piesat.cn/image-server/live/end.png);">
+    <image src="https://cloud.piesat.cn/image-server/live/logo.png" style="height:90px;width:200px"></image>
+    <view class="liveTime">
+      <view style="font-weight:bold;font-size:20px">直播结束</view>
+      <view style="margin-top:20px;color:#fff9">直播时长：{{liveTime}}</view>
+    </view>
+    <button class="back" bindtap="back">回看</button>
+  </view>
+  <view wx:else>
+  <video 
+  id='backVideo'
+  autoplay
+  bindplay='backplay'
+   src='{{videoUrl}}' ></video>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<view class="history">
+  <view class="title">{{title}}</view>
+  <view class="list_box">
+    <view wx:for="{{history_list}}" wx:key="index" data-obj="{{item}}" class="history_list"  bindtap="startPlay">
+      <!-- <image class="img"></image> -->
+      <!-- <img src="" alt="" class="img"> -->
+      <view class="message">
+        {{item.recordtitle}}
+      </view>
+    </view>
+  </view>
+</view>

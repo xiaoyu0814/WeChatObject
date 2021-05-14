@@ -1,0 +1,16 @@
+<view class="login">
+  <view class="box">
+    <view class="title">登录</view>
+    <input class="input_style" placeholder="请输入用户名或邮箱或手机号..." bindinput="getUserName" value="{{userName}}" />
+    <input class="input_style" password type="text" placeholder="请输入密码" bindinput="getPassword" value="{{password}}" />
+    <view class="checkCode_box">
+      <input class="checkCode_input" placeholder="请输入验证码" bindinput="getCheckCode" value="{{getCheckCode_value}}" />
+      <view id="checkCode" class="user_verificationcode" bindtap="createCode">{{checkCode}}</view>
+    </view>
+    <view class="login_button_box">
+      <button class="login_button" bindtap="submitForm">登录</button>
+      <button class="btninfo" bindtap="goToRegister">注册账号</button>
+    </view>
+    <view class="resetPWD" bindtap="goToResetPWD">忘记密码？</view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+.agreement{
+  padding: 10px;
+  font-size: 14px;
+}
+
+.title{
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 26px;
+  margin-bottom:20px;
+}
+
+.strong{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.indent{
+  text-indent: 28px;
+}

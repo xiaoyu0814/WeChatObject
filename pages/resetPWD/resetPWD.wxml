@@ -1,0 +1,17 @@
+<view class="resetPWD">
+  <view class="box">
+    <view class="title">重置密码</view>
+    <input class="input_style" placeholder="请输入手机号或邮箱" value="{{username}}" bindblur="getUsername"/>
+    <input class="input_style" password placeholder="请设置6-20位字母+数字的新密码"  value="{{newPassword}}" bindblur="getNewPassword"/>
+    <input class="input_style" password placeholder="再次输入新密码"  value="{{newConfirm}}" bindblur="getNewConfirm"/>
+    <view class="checkCode_box">
+      <input type="text" placeholder="请输入验证码" class="checkCode_input"  value="{{checkCode}}" bindblur="getCheckCode"/>
+      <button class="user_verificationcode" bindtap="getCode" wx:if="{{getCheckCode_show}}">发送验证码</button>
+      <button class="user_verificationcode" bindtap="getCode" wx:if="{{!getCheckCode_show}}">{{countdown}}秒</button>
+    </view>
+    <view class="btn_box" >
+      <button class="backLogin" bindtap="goToLogin">返回登陆</button>
+      <button class="reset" bindtap="reset">重置密码</button>
+    </view>
+  </view>
+</view>
